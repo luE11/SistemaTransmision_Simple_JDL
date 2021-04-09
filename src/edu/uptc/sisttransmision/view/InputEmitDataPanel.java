@@ -108,5 +108,7 @@ public class InputEmitDataPanel extends JPanel{
 	
 	public void test() {
 		System.out.println("holaaa");
+		System.out.println("holaaa");
+
 	}
 }
