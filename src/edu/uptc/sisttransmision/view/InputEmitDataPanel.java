@@ -28,7 +28,7 @@ public class InputEmitDataPanel extends JPanel{
 	public InputEmitDataPanel(ActionListener control) {
 		this.setLayout(new GridBagLayout());
 		
-		setBackground(Color.white);
+		setBackground(Color.red);
 		
 		Font myFont = new Font(Font.SANS_SERIF, Font.BOLD, 14);
 		
