@@ -104,4 +104,9 @@ public class InputEmitDataPanel extends JPanel{
 		
 		setVisible(true);
 	}
+	
+	
+	public void test() {
+		
+	}
 }
