@@ -17,6 +17,8 @@ import javax.swing.border.LineBorder;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.border.TitledBorder;
+import javax.swing.JScrollBar;
+import javax.swing.JScrollPane;
 
 public class JFrameMain extends JFrame {
 
@@ -124,9 +126,13 @@ public class JFrameMain extends JFrame {
 		lblNewLabel_7.setBounds(10, 123, 46, 14);
 		panel_1.add(lblNewLabel_7);
 		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 165, 331, 126);
+		panel_1.add(scrollPane);
+		
 		textAreaMensaje1 = new JTextArea();
-		textAreaMensaje1.setBounds(10, 148, 331, 98);
-		panel_1.add(textAreaMensaje1);
+		textAreaMensaje1.setLineWrap(true);
+		scrollPane.setViewportView(textAreaMensaje1);
 		
 		JPanel panel_1_1 = new JPanel();
 		panel_1_1.setBorder(new TitledBorder(null, "DESTINO", TitledBorder.LEADING, TitledBorder.TOP, null, null));

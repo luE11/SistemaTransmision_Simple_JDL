@@ -46,7 +46,6 @@ public class Control implements ActionListener {
 	}
 
 	public void setInfoFuente() {
-//		messageProcessing = new MessageProcessing();
 		frame.textFieldDestinoBin.setText(destino);
 		frame.textFieldFuenteBin.setText(fuente);
 		frame.textFieldLongitudBin.setText(messageProcessing.messageBitsLength(frame.textFieldMensaje.getText()));
