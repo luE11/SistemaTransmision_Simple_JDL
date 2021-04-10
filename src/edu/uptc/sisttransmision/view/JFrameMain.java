@@ -99,7 +99,7 @@ public class JFrameMain extends JFrame {
 		panel_1.add(lblNewLabel_4);
 
 		textFieldFuenteBin = new JTextField();
-		textFieldFuenteBin.setBounds(171, 33, 170, 20);
+		textFieldFuenteBin.setBounds(130, 33, 211, 20);
 		panel_1.add(textFieldFuenteBin);
 		textFieldFuenteBin.setColumns(10);
 
@@ -108,7 +108,7 @@ public class JFrameMain extends JFrame {
 		panel_1.add(lblNewLabel_5);
 
 		textFieldDestinoBin = new JTextField();
-		textFieldDestinoBin.setBounds(171, 61, 170, 20);
+		textFieldDestinoBin.setBounds(130, 61, 211, 20);
 		panel_1.add(textFieldDestinoBin);
 		textFieldDestinoBin.setColumns(10);
 
@@ -117,12 +117,13 @@ public class JFrameMain extends JFrame {
 		panel_1.add(lblNewLabel_6);
 
 		textFieldLongitudBin = new JTextField();
-		textFieldLongitudBin.setBounds(171, 88, 86, 20);
+		textFieldLongitudBin.setBounds(130, 88, 86, 20);
+		textFieldLongitudBin.setEditable(false);
 		panel_1.add(textFieldLongitudBin);
 		textFieldLongitudBin.setColumns(10);
 
 		JLabel lblNewLabel_7 = new JLabel("MENSAJE");
-		lblNewLabel_7.setBounds(10, 123, 46, 14);
+		lblNewLabel_7.setBounds(10, 123, 170, 14);
 		panel_1.add(lblNewLabel_7);
 
 		JScrollPane scrollPane = new JScrollPane();
@@ -131,6 +132,8 @@ public class JFrameMain extends JFrame {
 
 		textAreaMensaje1 = new JTextArea();
 		textAreaMensaje1.setLineWrap(true);
+		textAreaMensaje1.setEditable(false);
+
 		scrollPane.setViewportView(textAreaMensaje1);
 
 		JPanel panel_1_1 = new JPanel();
@@ -166,22 +169,24 @@ public class JFrameMain extends JFrame {
 		
 		textArea_MensajeTraducido = new JTextArea();
 		textArea_MensajeTraducido.setLineWrap(true);
+		textArea_MensajeTraducido.setEditable(false);
 		textArea_MensajeTraducido.setBounds(10, 282, 331, 55);
 		scrollPane2.setViewportView(textArea_MensajeTraducido);
 
 		textField_FuenteBin2 = new JTextField();
 		textField_FuenteBin2.setColumns(10);
-		textField_FuenteBin2.setBounds(149, 34, 170, 20);
+		textField_FuenteBin2.setBounds(123, 34, 196, 20);
 		panel_1_1.add(textField_FuenteBin2);
 
 		textField_DestinoBin2 = new JTextField();
 		textField_DestinoBin2.setColumns(10);
-		textField_DestinoBin2.setBounds(149, 59, 170, 20);
+		textField_DestinoBin2.setBounds(123, 59, 196, 20);
 		panel_1_1.add(textField_DestinoBin2);
 
 		textField_LongitudBin2 = new JTextField();
 		textField_LongitudBin2.setColumns(10);
-		textField_LongitudBin2.setBounds(149, 87, 86, 20);
+		textField_LongitudBin2.setEditable(false);
+		textField_LongitudBin2.setBounds(123, 84, 86, 20);
 		panel_1_1.add(textField_LongitudBin2);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
@@ -190,9 +195,9 @@ public class JFrameMain extends JFrame {
 		
 				textArea_MensajeBin2 = new JTextArea();
 				textArea_MensajeBin2.setLineWrap(true);
+				textArea_MensajeBin2.setEditable(false);
 				scrollPane_1.setViewportView(textArea_MensajeBin2);
 
-//		Control.getInstance().setFrame(this);
 
 	}
 

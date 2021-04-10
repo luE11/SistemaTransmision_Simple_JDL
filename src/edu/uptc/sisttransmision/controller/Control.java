@@ -30,7 +30,7 @@ public class Control implements ActionListener {
 		if (e.getActionCommand() == "ENVIAR_MENSAJE") {
 			getInfo();
 			setInfoFuente();
-
+			clean();
 		}
 	}
 
@@ -57,6 +57,13 @@ public class Control implements ActionListener {
 		frame.textArea_MensajeBin2.setText(mensaje+ " 11111111");
 //		frame.textArea_MensajeTraducido.setText(messageProcessing.convertBitsToMessage(mensaje));
 		frame.textArea_MensajeTraducido.setText(frame.textFieldMensaje.getText());
+
+	}
+	
+	public void clean() {
+		frame.textFieldFuente.setText("");
+		frame.textFieldDestino.setText("");
+		frame.textFieldMensaje.setText("");
 
 	}
 
