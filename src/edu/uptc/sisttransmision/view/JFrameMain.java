@@ -30,6 +30,7 @@ public class JFrameMain extends JFrame {
 	public JTextField textField_FuenteBin2;
 	public JTextField textField_DestinoBin2;
 	public JTextField textField_LongitudBin2;
+	public JTextArea textAreaMensaje1;
 	public JButton btnEnviar;
 
 
@@ -123,7 +124,7 @@ public class JFrameMain extends JFrame {
 		lblNewLabel_7.setBounds(10, 123, 46, 14);
 		panel_1.add(lblNewLabel_7);
 		
-		JTextArea textAreaMensaje1 = new JTextArea();
+		textAreaMensaje1 = new JTextArea();
 		textAreaMensaje1.setBounds(10, 148, 331, 98);
 		panel_1.add(textAreaMensaje1);
 		

@@ -3,15 +3,19 @@ package edu.uptc.sisttransmision.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import edu.uptc.sisttransmision.model.MessageProcessing;
 import edu.uptc.sisttransmision.view.JFrameMain;
 
 public class Control implements ActionListener {
 
 	private JFrameMain frame;
 	private static Control CONTROL = null;
+	private String fuente, destino, mensaje;
+	private MessageProcessing messageProcessing;
 
 	public Control() {
 		frame = new JFrameMain(this);
+		messageProcessing = new MessageProcessing();
 		init();
 
 	}
@@ -25,6 +29,7 @@ public class Control implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand() == "ENVIAR_MENSAJE") {
 			getInfo();
+			setInfoFuente();
 
 		}
 	}
@@ -34,9 +39,18 @@ public class Control implements ActionListener {
 	}
 
 	public void getInfo() {
-		String fuente, destino, mensaje;
-		fuente = frame.getTextFieldFuente().getText();
-		System.out.println("el mensaje es " + fuente + "hooooo");
+		fuente = messageProcessing.convertMessageToBits(frame.textFieldFuente.getText());
+		destino = messageProcessing.convertMessageToBits(frame.textFieldDestino.getText());
+		mensaje = messageProcessing.convertMessageToBits(frame.textFieldMensaje.getText());
+
+	}
+
+	public void setInfoFuente() {
+//		messageProcessing = new MessageProcessing();
+		frame.textFieldDestinoBin.setText(destino);
+		frame.textFieldFuenteBin.setText(fuente);
+		frame.textFieldLongitudBin.setText(messageProcessing.messageBitsLength(frame.textFieldMensaje.getText()));
+		frame.textAreaMensaje1.setText(mensaje);
 
 	}
 
