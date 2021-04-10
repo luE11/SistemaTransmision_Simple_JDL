@@ -21,16 +21,16 @@ import javax.swing.border.TitledBorder;
 public class JFrameMain extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textFieldFuente;
-	private JTextField textFieldDestino;
-	private JTextField textFieldMensaje;
-	private JTextField textFieldFuenteBin;
-	private JTextField textFieldDestinoBin;
-	private JTextField textFieldLongitudBin;
-	private JTextField textField_FuenteBin2;
-	private JTextField textField_DestinoBin2;
-	private JTextField textField_LongitudBin2;
-	private JButton btnEnviar;
+	public JTextField textFieldFuente;
+	public JTextField textFieldDestino;
+	public JTextField textFieldMensaje;
+	public JTextField textFieldFuenteBin;
+	public JTextField textFieldDestinoBin;
+	public JTextField textFieldLongitudBin;
+	public JTextField textField_FuenteBin2;
+	public JTextField textField_DestinoBin2;
+	public JTextField textField_LongitudBin2;
+	public JButton btnEnviar;
 
 
 
@@ -38,7 +38,7 @@ public class JFrameMain extends JFrame {
 	 * Create the frame.
 	 * @param control 
 	 */
-	public JFrameMain() {
+	public JFrameMain(ActionListener control) {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		setBounds(100, 100, 900, 600);
@@ -72,21 +72,17 @@ public class JFrameMain extends JFrame {
 		textFieldFuente = new JTextField();
 		textFieldFuente.setBounds(334, 41, 170, 20);
 		panel.add(textFieldFuente);
-		textFieldFuente.setColumns(10);
-		
 		textFieldDestino = new JTextField();
 		textFieldDestino.setBounds(334, 69, 170, 20);
 		panel.add(textFieldDestino);
-		textFieldDestino.setColumns(10);
 		
 		textFieldMensaje = new JTextField();
 		textFieldMensaje.setBounds(334, 95, 170, 20);
 		panel.add(textFieldMensaje);
-		textFieldMensaje.setColumns(10);
 		
 		btnEnviar = new JButton("ENVIAR MENSAJE");
 		btnEnviar.setBounds(301, 126, 170, 23);
-		btnEnviar.addActionListener(Control.getInstance());
+		btnEnviar.addActionListener(control);
 		btnEnviar.setActionCommand("ENVIAR_MENSAJE");
 		panel.add(btnEnviar);
 		
@@ -179,5 +175,13 @@ public class JFrameMain extends JFrame {
 		textField_LongitudBin2.setColumns(10);
 		textField_LongitudBin2.setBounds(149, 87, 86, 20);
 		panel_1_1.add(textField_LongitudBin2);
+		
+//		Control.getInstance().setFrame(this);
+
+	}
+	
+	
+	public JTextField getTextFieldFuente() {
+		return textFieldFuente;
 	}
 }

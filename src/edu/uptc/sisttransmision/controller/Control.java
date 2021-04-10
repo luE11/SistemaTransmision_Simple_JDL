@@ -11,17 +11,12 @@ public class Control implements ActionListener {
 	private static Control CONTROL = null;
 
 	public Control() {
-	}
+		frame = new JFrameMain(this);
+		init();
 
-	public static Control getInstance() {
-		if (CONTROL == null) {
-			CONTROL = new Control();
-		}
-		return CONTROL;
 	}
 
 	public void init() {
-		frame = new JFrameMain();
 		frame.setVisible(true);
 		frame.setLocationRelativeTo(null);
 	}
@@ -29,9 +24,20 @@ public class Control implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand() == "ENVIAR_MENSAJE") {
-			System.out.println("enviar");
+			getInfo();
 
 		}
+	}
+
+	public void setFrame(JFrameMain frame) {
+		this.frame = frame;
+	}
+
+	public void getInfo() {
+		String fuente, destino, mensaje;
+		fuente = frame.getTextFieldFuente().getText();
+		System.out.println("el mensaje es " + fuente + "hooooo");
+
 	}
 
 }
