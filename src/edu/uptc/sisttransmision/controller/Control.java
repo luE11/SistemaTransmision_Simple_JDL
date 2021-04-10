@@ -39,8 +39,8 @@ public class Control implements ActionListener {
 	}
 
 	public void getInfo() {
-		fuente = messageProcessing.convertMessageToBits(frame.textFieldFuente.getText());
-		destino = messageProcessing.convertMessageToBits(frame.textFieldDestino.getText());
+		fuente = messageProcessing.convertIPToBitsSegments(frame.textFieldFuente.getText());
+		destino = messageProcessing.convertIPToBitsSegments(frame.textFieldDestino.getText());
 		mensaje = messageProcessing.convertMessageToBits(frame.textFieldMensaje.getText());
 
 	}
