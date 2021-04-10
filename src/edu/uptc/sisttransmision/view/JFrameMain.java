@@ -34,6 +34,8 @@ public class JFrameMain extends JFrame {
 	public JTextField textField_LongitudBin2;
 	public JTextArea textAreaMensaje1, textArea_MensajeBin2, textArea_MensajeTraducido;
 	public JButton btnEnviar;
+	public JTextField textFieldLongitudNorm;
+	public JTextField textFieldLongitudNorm2;
 
 	/**
 	 * Create the frame.
@@ -135,6 +137,12 @@ public class JFrameMain extends JFrame {
 		textAreaMensaje1.setEditable(false);
 
 		scrollPane.setViewportView(textAreaMensaje1);
+		
+		textFieldLongitudNorm = new JTextField();
+		textFieldLongitudNorm.setEditable(false);
+		textFieldLongitudNorm.setColumns(10);
+		textFieldLongitudNorm.setBounds(255, 88, 86, 20);
+		panel_1.add(textFieldLongitudNorm);
 
 		JPanel panel_1_1 = new JPanel();
 		panel_1_1.setBorder(new TitledBorder(null, "DESTINO", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -175,18 +183,18 @@ public class JFrameMain extends JFrame {
 
 		textField_FuenteBin2 = new JTextField();
 		textField_FuenteBin2.setColumns(10);
-		textField_FuenteBin2.setBounds(123, 34, 196, 20);
+		textField_FuenteBin2.setBounds(145, 34, 196, 20);
 		panel_1_1.add(textField_FuenteBin2);
 
 		textField_DestinoBin2 = new JTextField();
 		textField_DestinoBin2.setColumns(10);
-		textField_DestinoBin2.setBounds(123, 59, 196, 20);
+		textField_DestinoBin2.setBounds(145, 59, 196, 20);
 		panel_1_1.add(textField_DestinoBin2);
 
 		textField_LongitudBin2 = new JTextField();
 		textField_LongitudBin2.setColumns(10);
 		textField_LongitudBin2.setEditable(false);
-		textField_LongitudBin2.setBounds(123, 84, 86, 20);
+		textField_LongitudBin2.setBounds(145, 84, 86, 20);
 		panel_1_1.add(textField_LongitudBin2);
 		
 		JScrollPane scrollPane_1 = new JScrollPane();
@@ -197,6 +205,12 @@ public class JFrameMain extends JFrame {
 				textArea_MensajeBin2.setLineWrap(true);
 				textArea_MensajeBin2.setEditable(false);
 				scrollPane_1.setViewportView(textArea_MensajeBin2);
+				
+				textFieldLongitudNorm2 = new JTextField();
+				textFieldLongitudNorm2.setEditable(false);
+				textFieldLongitudNorm2.setColumns(10);
+				textFieldLongitudNorm2.setBounds(255, 84, 86, 20);
+				panel_1_1.add(textFieldLongitudNorm2);
 
 
 	}

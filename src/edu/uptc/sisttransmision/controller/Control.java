@@ -49,11 +49,13 @@ public class Control implements ActionListener {
 		frame.textFieldDestinoBin.setText(destino);
 		frame.textFieldFuenteBin.setText(fuente);
 		frame.textFieldLongitudBin.setText(messageProcessing.messageBitsLength(frame.textFieldMensaje.getText()));
+		frame.textFieldLongitudNorm.setText(messageProcessing.messageIntLength(frame.textFieldMensaje.getText()));
 		frame.textAreaMensaje1.setText(mensaje+ " 11111111");
 		
 		frame.textField_DestinoBin2.setText(destino);
 		frame.textField_FuenteBin2.setText(fuente);
 		frame.textField_LongitudBin2.setText(messageProcessing.messageBitsLength(frame.textFieldMensaje.getText()));
+		frame.textFieldLongitudNorm2.setText(messageProcessing.messageIntLength(frame.textFieldMensaje.getText()));
 		frame.textArea_MensajeBin2.setText(mensaje+ " 11111111");
 //		frame.textArea_MensajeTraducido.setText(messageProcessing.convertBitsToMessage(mensaje));
 		frame.textArea_MensajeTraducido.setText(frame.textFieldMensaje.getText());
