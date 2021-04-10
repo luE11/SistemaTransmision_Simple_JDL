@@ -30,7 +30,7 @@ public class JFrameMain extends JFrame {
 	private JTextField textField_FuenteBin2;
 	private JTextField textField_DestinoBin2;
 	private JTextField textField_LongitudBin2;
-
+	private JButton btnEnviar;
 
 
 
@@ -38,7 +38,7 @@ public class JFrameMain extends JFrame {
 	 * Create the frame.
 	 * @param control 
 	 */
-	public JFrameMain(ActionListener control) {
+	public JFrameMain() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
 		setBounds(100, 100, 900, 600);
@@ -84,8 +84,10 @@ public class JFrameMain extends JFrame {
 		panel.add(textFieldMensaje);
 		textFieldMensaje.setColumns(10);
 		
-		JButton btnEnviar = new JButton("ENVIAR MENSAJE");
+		btnEnviar = new JButton("ENVIAR MENSAJE");
 		btnEnviar.setBounds(301, 126, 170, 23);
+		btnEnviar.addActionListener(Control.getInstance());
+		btnEnviar.setActionCommand("ENVIAR_MENSAJE");
 		panel.add(btnEnviar);
 		
 		JPanel panel_1 = new JPanel();
