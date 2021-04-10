@@ -22,13 +22,13 @@ public class InputEmitDataPanel extends JPanel{
 	private static final long serialVersionUID = 1L;
 	private JLabel lblTitle, lblEmitter, lblReceiver, lblMessage;
 	private JTextField txtEmitter, txtReceiver, txtMessage;
-	private JButton btnStartTransmission;
+	private JButton btnStartTransmission , test;
+	private JPanel jPanelLeft, jPanelRight;
 	private GridBagConstraints gbc;
 	
 	public InputEmitDataPanel(ActionListener control) {
 		this.setLayout(new GridBagLayout());
 		
-		setBackground(Color.red);
 		
 		Font myFont = new Font(Font.SANS_SERIF, Font.BOLD, 14);
 		
@@ -101,6 +101,22 @@ public class InputEmitDataPanel extends JPanel{
 		gbc.gridy = 4;
 		
 		add(btnStartTransmission, gbc);
+		
+		
+		test =  new JButton("hola mi nombre es daniel");
+		test.setBackground(Color.red);
+		
+		gbc.gridwidth = 1;
+		gbc.gridx = 0;
+		gbc.gridy = 5;
+		add(test, gbc);
+		
+		jPanelRight = new JPanel();
+		jPanelRight.setBackground(Color.green);
+		gbc.gridwidth = 1;
+		gbc.gridx = 1;
+		gbc.gridy = 5;
+		add(jPanelRight, gbc);
 		
 		setVisible(true);
 	}
