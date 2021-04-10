@@ -3,17 +3,19 @@ package edu.uptc.sisttransmision.controller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import edu.uptc.sisttransmision.view.MainFrame;
+import edu.uptc.sisttransmision.view.JFrameMain;
 
 public class Control implements ActionListener {
 
-	private MainFrame frame;
+	private JFrameMain frame;
 	
 	public Control() {		
 	}
 	
 	public void init() {
-		frame = new MainFrame(this);
+		frame = new JFrameMain(this);
+		frame.setVisible(true);
+		frame.setLocationRelativeTo(null);
 	}
 
 	@Override
