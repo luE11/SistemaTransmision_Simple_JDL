@@ -69,7 +69,7 @@ public class JFrameMain extends JFrame {
 		lblNewLabel_2.setBounds(131, 72, 170, 14);
 		panel.add(lblNewLabel_2);
 
-		JLabel lblNewLabel_3 = new JLabel("INGRESE MENSAJEl");
+		JLabel lblNewLabel_3 = new JLabel("INGRESE MENSAJE");
 		lblNewLabel_3.setBounds(131, 98, 170, 14);
 		panel.add(lblNewLabel_3);
 
