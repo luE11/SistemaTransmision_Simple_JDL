@@ -31,7 +31,7 @@ public class MessageProcessing {
 			messagebits += dictionary.getTranslateToBinary(message.charAt(i));
 			messagebits += (i<(message.length()-1))?" ": "";
 		}
-		return messagebits;
+		return messagebits+ " "+ final_plot;
 	}
 	
 	public String allPlot(String IPOrigin, String IPDestination, String message) { //retorna todo el mensaje (ip fuente, ip destino, longitud del mensaje, mensaje y 11111111" en bits
