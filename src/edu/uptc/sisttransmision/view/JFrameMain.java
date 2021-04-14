@@ -33,7 +33,7 @@ public class JFrameMain extends JFrame {
 	public JTextField textField_DestinoBin2;
 	public JTextField textField_LongitudBin2;
 	public JTextArea textAreaMensaje1, textArea_MensajeBin2, textArea_MensajeTraducido;
-	public JButton btnEnviar;
+	public JButton btnEnviar, btnLimpiar;
 	public JTextField textFieldLongitudNorm;
 	public JTextField textFieldLongitudNorm2;
 
@@ -85,10 +85,16 @@ public class JFrameMain extends JFrame {
 		panel.add(textFieldMensaje);
 
 		btnEnviar = new JButton("ENVIAR MENSAJE");
-		btnEnviar.setBounds(301, 126, 170, 23);
+		btnEnviar.setBounds(201, 126, 170, 23);
 		btnEnviar.addActionListener(control);
 		btnEnviar.setActionCommand("ENVIAR_MENSAJE");
 		panel.add(btnEnviar);
+		
+		btnLimpiar = new JButton("LIMPIAR CAMPOS");
+		btnLimpiar.setBounds(401, 126, 170, 23);
+		btnLimpiar.addActionListener(control);
+		btnLimpiar.setActionCommand("LIMPIAR");
+		panel.add(btnLimpiar);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new TitledBorder(null, "FUENTE", TitledBorder.LEADING, TitledBorder.TOP, null, null));

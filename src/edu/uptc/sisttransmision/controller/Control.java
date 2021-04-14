@@ -32,6 +32,8 @@ public class Control implements ActionListener {
 		if (e.getActionCommand() == "ENVIAR_MENSAJE") {
 			getInfo();
 			setInfoFuente();
+			//clean();
+		}else {
 			clean();
 		}
 	}
